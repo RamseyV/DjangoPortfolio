@@ -1,0 +1,48 @@
+{% extends "portfolio/header.html" %} 
+
+{% block title %}
+ <title>Jobs</title>
+{% endblock %}
+
+{% load static %} 
+
+{% block style %}
+<link rel='stylesheet' href= "{% static '/portfolio/css/education.css' %}" type='text/css'>
+{% endblock %}
+
+
+{% block content %}
+
+	
+	<div class="row">
+		<div class="col">
+
+			<ul>
+				<li>
+		     <p class="jobTitle">IT Help Desk at West Chester University: 2016-2018</p>
+		     <p>Provided customer service and support for IT related issues for students, faculty and staff.</p>
+		 </li>
+		 <li>
+		 <p class="jobTitle">BET Investments: 2018</p>
+		     <p>Community Assisant at The Edge in West Chester.</p>
+		 </li>
+		 <li>
+		 	<p class="jobTitle">Turner Industries: 2017</p>
+		     <p>Manual Labor at Entergy Power Plant.</p>
+		 </li>
+		 <li>
+		 	<p class="jobTitle">Student Veterans Group Executive Board: 2016-2017</p>
+		 	<p>Secretary for the Student Veterans Group of West Chester University.</p>
+		 </li>
+		 <li>
+		 <p class="jobTitle">Bowtie Marina: 2016</p>
+		     <p>Moved boats in and out of dry storage and provided a welcome environment for customers.</p>
+		</li>
+		 </ul>
+
+		</div>
+	</div>
+
+{% endblock %}
+
+

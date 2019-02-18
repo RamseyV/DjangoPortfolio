@@ -1,0 +1,6 @@
+img.link{
+	vertical-align: middle;
+	max-height: 20px;
+	-webkit-filter: brightness(0) invert(1);
+	filter: brightness(0) invert(1);
+}

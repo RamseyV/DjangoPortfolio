@@ -1,0 +1,36 @@
+
+<div class="row">
+
+	{% for sub in subjects %}
+		<div class="col s12 m6">
+			<p class="subject">{{sub.subject}}</p>
+			
+					
+				<ul class="collapsible">
+					{% for class in classes %}
+						{% if class.subject.subject == sub.subject %}
+							<li>
+							    <div class="collapsible-header">
+							    	<i class="material-icons">keyboard_arrow_right</i>
+							    	{{class.name}}
+							    </div>
+							    
+							    <div class="collapsible-body">{{class.description}}
+							    
+								  {% if class.subject.subject == "Computer Science" %}
+								    	<div><span><span class="language">Laguages:</span>
+								    		{% for lang in class.languages.all %} 
+								    			{{lang}}
+								    			{% if not forloop.last %},{% endif %}
+								    		{% endfor %}
+								     	</span></div>
+								    {% endif %}
+								</div>
+							</li>		
+						{% endif %}
+					{% endfor %} 
+				</ul>
+		</div> 
+	{% endfor %}
+	
+</div><!--end row-->

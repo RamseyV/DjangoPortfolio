@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% block title %}
+  {% endblock %}
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+ -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %} 
+    <link rel='stylesheet' href= "{% static '/portfolio/css/header.css' %}" type='text/css'>
+    <!--This is for materialize-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    
+    <script>
+      $(document).ready(function () {
+        $(".button-collapse").sideNav();
+      });
+    </script>
+
+  {% block style %}
+  {% endblock %}
+    
+</head>
+<body>
+
+
+
+    
+    {% include 'portfolio/include/navbar.html' %}
+
+
+    {% block content %}
+    {% endblock %}
+
+    
+
+</body>
+</html>

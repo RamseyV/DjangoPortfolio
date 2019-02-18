@@ -1,0 +1,26 @@
+{% load static %} 
+
+<div class="navbar-fixed">
+    <nav style="background-color: #063787;"><!-- #c9cdd3 greyish-->
+        <div class="nav-wrapper">
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="left hide-on-med-and-down">
+            <li><a href="/" class="link">Home</a></li>
+            <li><a href="/experience" class="link">About Me</a></li>
+            <li><a href="/projects" class="link">Projects</a></li>
+          </ul>
+          <ul class="right">
+            <li><a href="https://github.com/RamseyV"><img src="{% static 'portfolio/images/github.png' %}" class="responsive-image link" alt=""></a></li>
+
+            <li>
+                 <a href="https://www.linkedin.com/in/ramsey-villarreal-2b3505166/"><img src="{% static 'portfolio/images/linkedin.png' %}" class="responsive-image link" alt=""></a></li>
+          </ul>
+        </div>
+      </nav>
+  </div>
+
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="/">Home</a></li>
+        <li><a href="/experience">About Me</a></li>
+        <li><a href="/projects">Projects</a></li>
+      </ul>

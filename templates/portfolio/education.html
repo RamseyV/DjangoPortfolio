@@ -1,0 +1,107 @@
+{% extends "portfolio/header.html" %}
+
+{% block title %}
+ <title>Education</title>
+{% endblock %}
+
+
+{% load static %} 
+
+{% block style %}
+<link rel='stylesheet' href= "{% static '/portfolio/css/education.css' %}" type='text/css'>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+    	$('.collapsible').collapsible();
+  	}); 
+	
+	$(document).ready(function(){
+    	$('.tabs').tabs();
+  	});
+  	$(document).ready(function(){
+  		$('.carousel').carousel();
+  });
+</script>
+
+{% endblock %}
+
+
+{% block content %}
+	
+ 
+
+<!--tabs for page-->
+<!-- <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+      	<li class="tab col s4"><a href="#aboutMe">About Me</a></li>
+        <li class="tab col s4 black-text"><a href="#education">Education</a></li>
+        <li class="tab col s4"><a href="#skills">Skills</a></li>
+       
+
+      </ul>
+    </div>
+</div> --> 
+<!--end tabs-->
+<div class="container">
+	
+
+
+<!-- Start of aboutme tab -->
+<!-- <div id="aboutMe">
+
+			{% include 'portfolio/include/aboutme.html' %}
+		
+</div> -->
+<!--end jobs-->
+
+
+
+
+<!-- Start of education tab -->
+<div id="education">
+
+		<div class="row">
+			<br>
+			<h4 class="center-align" style="padding-bottom: 25px;">Education</h4>
+			<div class="col s12 m4 center-align">
+				<img src="{% static 'portfolio/images/wcuHeaderLogo.png' %}"  alt="West Chester University" style="width:80%;">
+			</div>
+			<div class="col s12 m6 center-align">
+				<p class="degree">Bachelors of Science in Computer Science </p>
+			</div>		
+		</div><!--end row-->
+
+		<!-- List all classes -->
+		{% include 'portfolio/include/class_list.html'%}
+	
+</div><!--end educaiton-->
+
+
+<!-- Start of skills tab -->
+<div id="skills">
+
+	
+		<div class="row">
+
+			<div class="col s12">
+				<h4 class="center-align">Programming Knowkledge</h4>
+			</div>
+
+			<div class="col s12">
+				{% include 'portfolio/include/skills_list.html' %}
+			</div>
+			
+		</div>
+	
+
+</div><!--end jobs-->
+
+</div>
+
+
+		
+{% endblock %}
+
+
+

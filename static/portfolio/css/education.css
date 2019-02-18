@@ -1,0 +1,87 @@
+body{
+	font-family: "Courier New" ; 
+}
+
+.carousel{
+  /*min-height: 75vh;*/
+  top: -75px;
+  padding: 5;
+}
+#canvas{
+  /*position: fixed;*/
+  height:100%;
+
+  width:100%;
+}
+
+p.topic{
+  /*this is for page topic such as education or jobs*/
+  font-family:  "Palatino Linotype";
+  /*font-weight: bold;*/
+  text-decoration: underline;
+  font-size: 3em;
+  text-align: center;
+}
+
+p.school{
+	font-size: 1.5em;
+}
+
+p.degree{
+	font-size: 1.25em;
+}
+p.subject{
+/*this is for subject of classes such as comp sci or math*/
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 1em;
+	text-align: center;
+
+
+}
+
+.language{
+	font-weight: bold;
+}
+p.className{
+
+	font-weight: bold;
+}
+
+p.jobTitle{
+	font-weight: bold;
+}
+
+.card{
+  min-height:150px;
+}
+
+.collapsible li.active i {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+
+.tabs .tab a{
+    color:#000;
+} /*Black color to the text*/
+
+.tabs .tab a:hover {
+    background-color:#93bcff;
+    color:#0a3d12;
+} /*Text color on hover*/
+
+.tabs .tab a.active {
+    /*background-color:#000;*/
+    color:#0a3d12;
+} /*Background and text color when a tab is active*/
+
+.tabs .indicator {
+    background-color:#0a3d12;
+} /*Color of underline*/
+
+/*
+
+
+

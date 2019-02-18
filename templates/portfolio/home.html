@@ -1,0 +1,46 @@
+{% extends "portfolio/header.html" %}
+
+{% block title %}
+ <title>Home</title>
+{% endblock %}
+
+
+{% load static %} 
+
+{% block style %}
+<link rel='stylesheet' href= "{% static '/portfolio/css/main.css' %}" type='text/css'>
+{% endblock %}
+
+
+{% block content %}
+<div class="contianer">
+
+<div id="particles-js"></div>
+
+<div class="row" style="top:50px;">
+	
+	<div class="col s12 center-align">
+		 
+		 <img src="{% static 'portfolio/images/me.jpg' %}" class="profile-pic" alt="Very Handsome Man" style="width:160;height:240px;">
+		 <h1>Ramsey Villarreal</h1>
+		 <p>Computer Scientist &#8226; Software Engineer</p>
+		 
+		 <div class="links">
+				 <a href="RamseyVillarreal.pdf">Resmume [PDF]</a>
+			 <img src="{% static 'portfolio/images/github.jpg' %}" class="responsive-image" alt="" style="width:25px;">
+
+			 <a href="https://github.com/RamseyV">Github Profile</a>
+				 <img src="{% static 'portfolio/images/linkedinColor.png' %}" class="responsive-image" alt="" style="width:25px;"><a href="https://www.linkedin.com/in/ramsey-villarreal-2b3505166/"> LinkedIn Profile</a>
+		</div>
+	
+	</div> <!--end of col-->
+
+</div> <!--end of row -->
+</div>
+
+
+
+<script type="text/javascript" src={% static 'portfolio/js/particles.js' %}></script>
+<script type="text/javascript" src={% static 'portfolio/js/app.js' %}></script> 
+
+{% endblock %}
