@@ -1,5 +1,6 @@
 body{
-	font-family: "Courier New" ; 
+	/*font-family: "Courier New" ; */
+  background-color: black;
 }
 
 .carousel{
@@ -22,6 +23,7 @@ p.topic{
   font-size: 3em;
   text-align: center;
 }
+
 
 p.school{
 	font-size: 1.5em;
