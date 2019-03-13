@@ -13,3 +13,4 @@ class WCUClassesAdmin(admin.ModelAdmin):
 admin.site.register(Subjects)
 admin.site.register(Languages)
 admin.site.register(WCUClasses,WCUClassesAdmin)
+# admin.site.register(SkillPlanets)

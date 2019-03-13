@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import WCUClasses, Subjects, Languages
+from .models import WCUClasses, Subjects, Languages# , SkillPlanets
 
 def index(request):
 	return render(request, 'portfolio/home.html')
@@ -14,4 +14,4 @@ def jobs(request):
 	return render(request, 'portfolio/jobs.html')
 
 def projects(request):
-	return render(request, 'portfolio/projects.html')
+	return render(request, 'portfolio/projects.html') 
