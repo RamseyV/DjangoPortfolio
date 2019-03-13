@@ -1,18 +1,9 @@
+
 body{
-	/*font-family: "Courier New" ; */
-  background-color: black;
-}
-
-.carousel{
-  /*min-height: 75vh;*/
-  top: -75px;
-  padding: 5;
-}
-#canvas{
-  /*position: fixed;*/
-  height:100%;
-
-  width:100%;
+	font-family: "Courier New" ; 
+  /*background: radial-gradient(circle at 50% 50%, #112038, #000);*/
+  background-color: rgb(0, 0, 0);
+  overflow: auto;
 }
 
 p.topic{
@@ -54,36 +45,455 @@ p.jobTitle{
 	font-weight: bold;
 }
 
-.card{
-  min-height:150px;
+
+#space{
+  width:100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgb(0, 20, 60), rgb(0,15,50));
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: auto;
 }
 
-.collapsible li.active i {
-  -ms-transform: rotate(90deg); /* IE 9 */
-  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-  transform: rotate(90deg);
+#space .star{
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  z-index: -1;
+  -webkit-animation: twinkle 2s linear infinite;
+  animation: twinkle 2s linear infinite;
 }
 
 
-.tabs .tab a{
-    color:#000;
-} /*Black color to the text*/
 
-.tabs .tab a:hover {
-    background-color:#93bcff;
-    color:#0a3d12;
-} /*Text color on hover*/
+#orbit-container {
+  position: relative;
+  margin: auto;
+  top: 5em;
+  align-content: center;
+  height: 800px;
+  width: 800px;
+  /*background: transparent;*/
+  background: radial-gradient(circle at 50% 50%, rgba(0, 20, 60, .8), rgba(0,15,50, .1));
 
-.tabs .tab a.active {
-    /*background-color:#000;*/
-    color:#0a3d12;
-} /*Background and text color when a tab is active*/
+}
 
-.tabs .indicator {
-    background-color:#0a3d12;
-} /*Color of underline*/
+.sun{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  background: linear-gradient( #ffd91e, #f99d09,#ffd91e);
+  z-index: 400px;
+  top: 375px;
+  left: 375px; 
+}
 
-/*
+ 
+ /***************************************Orbits************************************/
+
+.orbit{
+  position: absolute;
+  border: 1px #5b5b5b solid;
+  border-radius: 100%;
+  
+  -webkit-animation: orbitSun linear infinite;
+  animation: orbitSun linear infinite;
+}
+
+
+.orbit:hover {
+  border-color:#ffffff;
+  -webkit-animation-play-state:paused;
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.orbit:hover .planet{
+  -webkit-animation-play-state:paused;
+  animation-play-state: paused;
+}
+
+.orbit:hover .skill{
+  display: block;
+}
+
+.orbit:hover .skillOrbit{
+  -webkit-animation-play-state:paused;
+  animation-play-state: paused;
+}
+
+.asteroidOrbit{
+  position: absolute;
+  background-color: transparent;
+  border-radius: 100%;
+  -webkit-animation: orbitSun linear infinite;
+  animation: orbitSun linear infinite;
+
+}
+
+.skillOrbit{
+
+  position: relative;
+  bottom: 100%;
+  z-index: 15;
+}
+.skill{
+  color: rgb(187, 0, 193);
+  
+  display: none;
+  background-color: #b7b7b7;
+  height: 1em;
+  width: 5em;
+  text-align: center;
+  
+
+}
+
+#mercury.orbit{
+  z-index: 9;
+  height: 80px;
+  width: 80px;
+  top: 360px;
+  left: 360px;
+
+  -webkit-animation-duration:5s;
+  animation-duration: 5s;
+
+}
+
+#venus.orbit{
+  z-index: 8;
+  height:100px;
+  width: 100px;
+  top: 350px;
+  left: 350px;
+  -webkit-animation-duration:10s;
+  animation-duration: 10s;
+}
+
+
+#earth.orbit{
+  z-index: 7;
+  height: 130px;
+  width: 130px;
+  top: 335px;
+  left: 335px;
+  -webkit-animation-duration:15s;
+  animation-duration: 15s;
+}
+
+
+#mars.orbit{
+  z-index: 6;
+  height: 150px;
+  width: 150px;
+  top: 325px;
+  left: 325px;
+  -webkit-animation-duration:20s;
+  animation-duration: 20s;
+}
+
+
+#jupiter.orbit{
+  z-index: 5;
+  height: 300px;
+  width: 300px;
+  top: 250px;
+  left: 250px;
+  -webkit-animation-duration:55s;
+  animation-duration: 55s;
+
+}
+
+#saturn.orbit{
+   z-index: 4;
+   height: 400px;
+   width: 400px;
+   top: 200px;
+   left: 200px;
+   -webkit-animation-duration:65s;
+  animation-duration: 65s;
+}
+
+
+
+#uranus.orbit{
+  z-index: 3;
+  height: 500px;
+  width: 500px;
+  top: 150px;
+  left: 150px;
+  -webkit-animation-duration:70s;
+  animation-duration: 70s;
+}
+
+#neptune.orbit{
+  z-index: 2;
+  height: 600px;
+  width: 600px;
+  top: 100px;
+  left: 100px;
+  -webkit-animation-duration:80s;
+  animation-duration: 80s;
+}
+
+
+#pluto.orbit{
+  z-index: 1;
+  height: 700px;
+  width: 700px;
+  top: 50px;
+  left: 50px;
+  -webkit-animation-duration:100s;
+  animation-duration: 100s;
+}
+
+
+
+/**********************************************************************************/
+/***************************************Planet************************************/
+.planet{
+  position: absolute;
+  border-radius: 100%;
+}
+
+.asteroid{
+  position: absolute;
+  background-color: grey;
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+}
+
+/***************************************Planet Colors************************************/
+/*["#ffffff", "#ce7f00", "#027edd", "#d6bc68",
+ "#f4b042", "#f9ce89", "#2ec4f2", "#20a3cc", "#ffffff"]
+ ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptun", "pluto"]*/
+
+
+#mercury .planet{
+  height: 6px;
+  width: 6px;
+  background:radial-gradient(circle at 50% 100%, #cccbbb 60%, #99988b 40%);
+  top:-3px;
+  left:50%; 
+}
+
+#venus .planet{
+  background:radial-gradient(circle at 50% 100%, #ce7f00 60%, #9b5f00 40%);
+  height: 12px;
+  width: 12px;
+  top:-6px;
+  left:50%; 
+}
+
+
+#earth .planet{
+  background:radial-gradient(circle at 50% 100%, #027edd 60%, #0337c6 40%);
+  height: 14px;
+  width: 14px;
+  top:-7px;
+  left:50%; 
+}
+
+
+#mars .planet{
+  background:radial-gradient(circle at 50% 100%, #e2440b 60%, #8c2913 40%);
+  height: 8px;
+  width: 8px;
+  top:-4px;
+  left:50%; 
+}
+
+
+#jupiter .planet{
+  background:radial-gradient(circle at 50% 100%, #f4b042 60%, #a86c2b 40%);
+  height: 26px;
+  width: 26px;
+  top:-13px;
+  left:50%; 
+}
+
+#saturn .planet{
+  background:radial-gradient(circle at 50% 100%, #f9ce89 60%, #ce8c44 40%);
+  height: 20px;
+  width: 20px;
+  top:-10px;
+  left:50%; 
+}
+
+#saturn .rings{
+  border: 5px solid rgba(214, 184, 137,.7) ;
+  border-radius: 50%;
+  height:25px;
+  width:25px;
+  left:-8px;
+  top:-8px;
+  position: absolute;
+  -webkit-transform: skewX(45deg);
+  -moz-transform: skewX(45deg);
+  -o-transform: skewX(45deg);
+  transform: skewX(45deg);
+}
+
+#uranus .planet{
+  background:radial-gradient(circle at 50% 100%, #2ec4f2 60%, #2764c6 40%);
+  height: 16px;
+  width: 16px;
+  top:-8px;
+  left:50%; 
+}
+
+#neptune .planet{
+  background:radial-gradient(circle at 50% 100%, #20a3cc 60%, #2067cc 40%);
+  height: 16px;
+  width: 16px;
+  top:-8px;
+  left:50%; 
+}
+
+
+#pluto .planet{
+  background:radial-gradient(circle at 50% 100%, #ffffff 60%, #ffffff 40%);
+  height: 4px;
+  width: 4px;
+  top:-2px;
+  left:50%; 
+}
+
+
+
+
+
+/*************************************** Animations  ************************************/
+
+@-webkit-keyframes orbitSun {
+  from {  -webkit-transform: rotate(0deg); }
+  to   {  -webkit-transform: rotate(-360deg); }
+}
+
+@-moz-keyframes orbitSun{
+  from {  -moz-transform: rotate(0deg); }
+  to   {  -moz-transform: rotate(-360deg); }
+}
+
+@-o-keyframes orbitSun {
+  from {  -o-transform: rotate(0deg); }
+  to   {  -o-transform: rotate(-360deg); }
+}
+
+@keyframes orbitSun {
+  from {  transform: rotate(0deg) ; }
+  to   {  transform: rotate(-360deg) ; }
+}
+
+
+
+/**********************************   Twinkle animation     ************************************************/
+
+@-webkit-keyframes twinkle {
+  0% {  background: white}
+  50%   {  background: rgba(200,200,200,.8) }
+  100% { background: white }
+}
+
+@-moz-keyframes twinkle{
+ 0% {  background: white}
+  50%   {  background: rgba(200,200,200,.8) }
+  100% { background: white }
+}
+
+@-o-keyframes twinkle {
+  0% {  background: white}
+  50%   {  background: rgba(200,200,200,.8) }
+  100% { background: white }
+}
+
+@keyframes twinkle {
+  0% {  background: white}
+  50%   {  background: rgba(200,200,200,.8) }
+  100% { background: white }
+}
+
+
+
+
+/**************************************Skills***************************************************/
+.skillModal{
+  display: none;
+  width: 70%;
+  height: 75%;
+  z-index: 12;
+  background-color: #E37222;
+  position: fixed;
+  top: 15%;
+  left: 15%;
+  overflow-y: scroll;
+  border-radius: 3%;
+  /*border-style: solid;
+  border-color: #FF4F00;*/
+
+}
+ 
+
+.modal-content{
+  color: white;
+  margin: auto;
+  padding: 20px;
+}
+
+.skillTitle{
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.subHeader{
+  font-size: 1em;
+  /*padding-bottom: 10px;*/
+  text-decoration: underline;
+  padding-top: 1em;
+}
+
+.close{
+  float: right;
+  color: white;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+@media screen and (min-width: 768px){
+  #space{
+    background-color: radial-gradient(circle at 50% 50%, rgb(0, 20, 60), rgb(0,15,50));
+  }
+
+  .skillModal{
+    width: 40%;
+    position: absolute;
+    height: 500px;
+    top: 30%;
+    left: 30%;
+
+  }
+}
+
+
+/*Orange */
+/*#DE804A  */
+
 
 
 

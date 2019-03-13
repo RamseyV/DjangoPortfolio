@@ -4,21 +4,22 @@
  <title>Education</title>
 {% endblock %}
 
-
+ 
 {% load static %} 
 
 {% block style %}
 <link rel='stylesheet' href= "{% static '/portfolio/css/education.css' %}" type='text/css'>
+<!-- <link href= "{% static '/portfolio/js/education.js' %}" type='text/css'> -->
 
-
-{% endblock %}
+{% endblock %} 
 
 
 {% block content %}
-	
- 
-<script src="//d3js.org/d3.v3.min.js"></script>
 
+ {% include 'portfolio/include/planets.html' %}
+
+<script src="{% static 'portfolio/js/education.js' %}">
+</script>
 		
 {% endblock %}
 

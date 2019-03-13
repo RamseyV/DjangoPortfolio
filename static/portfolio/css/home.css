@@ -16,7 +16,7 @@ img.link:hover{
 .links{
 	top:.25em;
 }
-
+ 
 body{
 	margin: 0;
 	padding: 0;
@@ -113,7 +113,7 @@ body{
 	left: 0;
 	z-index: -1;
 }
-
+ 
 #space .star{
 	width: 2px;
 	height: 2px;
