@@ -49,10 +49,10 @@ p.jobTitle{
 #space{
   width:100%;
   height: 100%;
-  background: radial-gradient(circle at 50% 50%, rgb(0, 20, 60), rgb(0,15,50));
+  background-color: rgb(29,41,81);
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
   z-index: -1;
   overflow: auto;
 }
@@ -78,7 +78,7 @@ p.jobTitle{
   height: 800px;
   width: 800px;
   /*background: transparent;*/
-  background: radial-gradient(circle at 50% 50%, rgba(0, 20, 60, .8), rgba(0,15,50, .1));
+  background: radial-gradient(circle at 50% 50%, rgba(29,41,81, .8), rgba(29,41,81, .1));
 
 }
 
@@ -429,7 +429,8 @@ p.jobTitle{
   width: 70%;
   height: 75%;
   z-index: 12;
-  background-color: #E37222;
+  /*background-color: #E37222;*/
+  background-color: rgb(137, 207, 240);
   position: fixed;
   top: 15%;
   left: 15%;
@@ -477,9 +478,14 @@ p.jobTitle{
 
 @media screen and (min-width: 768px){
   #space{
-    background-color: radial-gradient(circle at 50% 50%, rgb(0, 20, 60), rgb(0,15,50));
+    background: radial-gradient(circle at 50% 50%, rgb(29,41,81), rgb(0,15,50));
   }
 
+  #orbit-container{
+    background-color: transparent;
+    background: transparent;
+    top:15%;
+  }
   .skillModal{
     width: 40%;
     position: absolute;

@@ -2,11 +2,13 @@
 
 .navbar{
 	font-size:20px;
-	background-color: rgba(255,255,255,.5);
+	background-color: rgba(226, 226, 226,.8);
 	width:150px;
-	position: absolute;
-	top:40px;
-	right:20px;
+	position: fixed;
+	top:2.5em;
+	left:5%;
+	z-index: 99;
+
 	
 }
 
@@ -14,7 +16,7 @@
 .main-nav{
 	list-style-type: none;
 	display: none;
-
+	padding-left: 10%;
 }
 
 .link{
@@ -27,14 +29,15 @@
 
 
 .navbar-toggle{
-	position: absolute;
 	padding-top: 0;
-	top: 20px;
-	right: 30px;
+	position: fixed;
+	top: 1em;
+	left: 5%;
 	cursor: pointer;
-	color: rgba(255,255,255,.5);
-	font-size: 24px
+	color: rgba(226, 226, 226,.8);
+	font-size: 1.5em;
 	background-color:transparent;
+	z-index: 99;
 }
 
 .active{
@@ -47,14 +50,14 @@
 		display: flex;
 		justify-content: space-between;
 		padding-bottom: 0;
-		height: 70px;
+		height: 4em;
 		align-items: center;
-		width: 100%;
+		width: 97%;
 		position: relative;
 		top:0px;
-		right:0px;
 		background-color: transparent;
-
+		font-size: 1.5em;
+		left: 0px;
 	}
 	
 
@@ -62,12 +65,13 @@
 		display: flex;
 		margin-left: auto;
 		flex-direction: row;
+		padding-left: 0%;
 		
 
 	}
 
 	.main-nav li{
-		margin: 0;
+		margin: 0px;
 	
 	}
 

@@ -76,11 +76,6 @@ function createPlanets(orbitContainerWidth, orbitContainerHeight, planetColors){
  }
 
 
- function showSkill(e){
- 	var tar = e.target.id;
- 	var skill = tar.firstElementChild;
- 	skill.style.display = "block";
- }
 
 
 //Create stars in the background of the page
@@ -93,12 +88,15 @@ function createStars(screenWidth, screenHeight, numStars, orbitContainerWidth, o
 		//Make stars on entire screen unless there the orbitContainer is bigger than screenwidth
 		if(screenHeight > orbitContainerHeight){
 			var top = Math.floor(Math.random() *  screenHeight+1);
+			console.log("Screen height bigger " + screenHeight);
 		}
 		else{
 			var top = Math.floor(Math.random() * orbitContainerHeight+1);
-		}
+					}
 		if(screenWidth > orbitContainerWidth){
 			var left = Math.floor(Math.random() * screenWidth+1);
+			console.log("Screen width bigger " + screenWidth);
+
 		}
 		else{
 			var left = Math.floor(Math.random() * orbitContainerWidth+1);
@@ -142,7 +140,7 @@ function createAsteroids(){
 		x = Math.cos(angle)*asteroidOrbitSize;
 		y = Math.sin(angle)*asteroidOrbitSize;
 
-		console.log(i + ". Angle: " + angle + " x: " + x + " y: " + y);
+		// console.log(i + ". Angle: " + angle + " x: " + x + " y: " + y);
 
 		
 		// put asteroid on side of square 
