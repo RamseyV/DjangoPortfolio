@@ -1,28 +1,43 @@
 body{
-	background: linear-gradient(rgb(29,41,81) 0%, rgb(0,15,50) 95%);
+	background-color: #D9B08C;
 	background-attachment: fixed;
-	font-family: "Courier New" !important; 
+	font-family: "Courier New" ; 
 }
 /*yellow*/
 /* #EAC67A*/
+
 .navColor{
-	height: 5em;
-	width: 100%;
-	background: linear-gradient(#984B43 0%, #DE804A  100%);
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	z-index: 1;
+	background-color: transparent;
 }
 
+@font-face {
+  font-family: builtFont;
+  src: url(../fonts/built_titling_el.ttf);
+}
+
+@font-face {
+  font-family: AlegreyaSans;
+  src: url(../fonts/AlegreyaSans-Thin.ttf);
+}
+
+
+
 .pageTitle{
-	width: 100%;
+	width: 8em;
+	margin: auto;
 	text-align: center;
-	top:5em;
+	margin-top: 1em;
 	z-index: -2;
-	color: white;
+	color: black;
 	font-size: 3em;
-	text-decoration: underline;
+	font-family: builtFont;
+	background-color: #FFCB9A;
+	padding-top: .25em;
+	padding-bottom: .25em;
+	box-shadow: 0 0 0 1pt #2C3531;
+	border-radius: 5%;
+	letter-spacing: .25em;
+	/*text-decoration: underline;*/
 }
 
 .container{
@@ -52,22 +67,34 @@ body{
 	/*z-index: 1;*/
 	/*padding: 5px;*/
     width: 20em;
-    height: 15em;
+    height: auto;
+    min-height: 15em;
     margin-top: 1em;
   
   	border-radius: 5%;
-	background: linear-gradient(#984B43 0%, rgb(137, 207, 240)  95%);
+	background-color: #D1E8E2;
+	font-family: AlegreyaSans;
+	/*letter-spacing: .5em;*/
+
 	/*background-color: rgb(137, 207, 240);*/
 	overflow-y: auto;
-	color: white;
+	color: black;
+	text-align:center;
 }
 
+a{
+	color: black;
+}
 
 .card-title{
-	font-size: 2em;
-	text-decoration: underline;
-	text-align:center;
+	font-size: 3em;
+	/*text-decoration: underline;*/
+	
 
+}
+.content{
+	font-size: 1em;
+	font-family: "Courier New";
 }
 
 
@@ -81,12 +108,23 @@ body{
 	.card{
 		min-width: 300px;
 		width: 20%;
-    	height: 20%;
+    	height: auto;
     	margin-left: 5%;
     	margin-right: 5%;
     	margin-top: 5%;
     	margin-bottom: auto;
+
 	
 	}
+	.navColor{
+		height: 7em;
+		width: 100%;
+		background: linear-gradient(#2C3531 0%, #116466  100%);
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: 1;
+	}
+
 
 }

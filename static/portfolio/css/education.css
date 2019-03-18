@@ -49,7 +49,7 @@ p.jobTitle{
 #space{
   width:100%;
   height: 100%;
-  background-color: rgb(29,41,81);
+  background-color: #2C3531;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -88,7 +88,8 @@ p.jobTitle{
   width: 50px;
   border-radius: 100%;
   background: linear-gradient( #ffd91e, #f99d09,#ffd91e);
-  z-index: 400px;
+  z-index: -1;
+  box-shadow: 0 0 100px 100px #127072;
   top: 375px;
   left: 375px; 
 }
@@ -98,7 +99,7 @@ p.jobTitle{
 
 .orbit{
   position: absolute;
-  border: 1px #5b5b5b solid;
+  border: 1px #727272 solid;
   border-radius: 100%;
   
   -webkit-animation: orbitSun linear infinite;
@@ -430,11 +431,11 @@ p.jobTitle{
   height: 75%;
   z-index: 12;
   /*background-color: #E37222;*/
-  background-color: rgb(137, 207, 240);
+  background-color: #D1E8E2;
   position: fixed;
   top: 15%;
   left: 15%;
-  overflow-y: scroll;
+  overflow-y: auto;
   border-radius: 3%;
   /*border-style: solid;
   border-color: #FF4F00;*/
@@ -443,9 +444,11 @@ p.jobTitle{
  
 
 .modal-content{
-  color: white;
+  color: black;
   margin: auto;
   padding: 20px;
+  position: relative;
+  height: inherit;
 }
 
 .skillTitle{
@@ -462,7 +465,7 @@ p.jobTitle{
 
 .close{
   float: right;
-  color: white;
+  color: black;
 }
 
 .close:hover,
@@ -478,7 +481,8 @@ p.jobTitle{
 
 @media screen and (min-width: 768px){
   #space{
-    background: radial-gradient(circle at 50% 50%, rgb(29,41,81), rgb(0,15,50));
+    /*background: ;*/
+    background: radial-gradient(circle at 50% 50%, #116466, #2C3531)
   }
 
   #orbit-container{
@@ -487,11 +491,14 @@ p.jobTitle{
     top:15%;
   }
   .skillModal{
+    overflow: auto;
+    height: auto;
     width: 40%;
     position: absolute;
-    height: 500px;
+    /*height: 500px;*/
     top: 30%;
     left: 30%;
+
 
   }
 }

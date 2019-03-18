@@ -5,10 +5,7 @@ def index(request):
 	return render(request, 'portfolio/home.html')
 
 def education(request):
-	classes = WCUClasses.objects.all()
-	subjects = Subjects.objects.all()
-	languages = Languages.objects.all()
-	return render(request, 'portfolio/education.html', context={"classes": classes, "subjects": subjects, "languages": languages})
+	return render(request, 'portfolio/education.html')
 
 def jobs(request):
 	return render(request, 'portfolio/jobs.html')
