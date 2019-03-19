@@ -139,16 +139,31 @@ body{
 	animation-name: moveRocket;
 	animation-duration: 10s;
 	animation-fill-mode:forwards;
+	z-index: 0;
 
 }
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes moveRocket {
   from {bottom: 0%;}
-  to {bottom: 30%;}
+  to {bottom: 20%;}
 }
 
 /* Standard syntax */
 @keyframes moveRocket {
   from {bottom: 0%;}
-  to {bottom: 30%;}
+  to {bottom: 20%;}
 }
+
+
+@media screen and (min-width: 768px){
+	@-webkit-keyframes moveRocket {
+	  from {bottom: 0%;}
+	  to {bottom: 30%;}
+	}
+
+	/* Standard syntax */
+	@keyframes moveRocket {
+	  from {bottom: 0%;}
+	  to {bottom: 30%;}
+	}	
+}/* Safari 4.0 - 8.0 */
