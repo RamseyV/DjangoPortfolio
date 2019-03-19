@@ -55,6 +55,7 @@ p.jobTitle{
   left: 0px;
   z-index: -1;
   overflow: auto;
+  background: radial-gradient(circle at 50% 50%, #116466, #2C3531);
 }
 
 #space .star{
@@ -78,7 +79,7 @@ p.jobTitle{
   height: 800px;
   width: 800px;
   /*background: transparent;*/
-  background: radial-gradient(circle at 50% 50%, rgba(29,41,81, .8), rgba(29,41,81, .1));
+  /*background: radial-gradient(circle at 50% 50%, rgba(29,41,81, .8), rgba(29,41,81, .1));*/
 
 }
 
@@ -104,6 +105,7 @@ p.jobTitle{
   
   -webkit-animation: orbitSun linear infinite;
   animation: orbitSun linear infinite;
+  outline-style: none;
 }
 
 
@@ -480,10 +482,7 @@ p.jobTitle{
 
 
 @media screen and (min-width: 768px){
-  #space{
-    /*background: ;*/
-    background: radial-gradient(circle at 50% 50%, #116466, #2C3531)
-  }
+
 
   #orbit-container{
     background-color: transparent;

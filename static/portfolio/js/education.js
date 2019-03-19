@@ -37,7 +37,7 @@ function createStars(screenWidth, screenHeight, numStars, orbitContainerWidth, o
 // make asteroids in asteroid belt
 function createAsteroids(){
 	var orbitContainer = document.getElementById("orbit-container");
-	var numAsteroids = 100;
+	var numAsteroids = 75;
 	var containerSize = 800;
 	var biggestOrbit = 275;
 	var smallestOrbit = 175;
@@ -118,7 +118,7 @@ var screenWidth = screen.width;
 var screenHeight = screen.height;
 var orbitContainerWidth = 800;
 var orbitContainerHeight = 800;
-var numStars = 150;
+var numStars = 125;
 createStars(screenWidth,screenHeight,numStars, orbitContainerWidth, orbitContainerHeight);
 createAsteroids();
 

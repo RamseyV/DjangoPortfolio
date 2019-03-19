@@ -23,7 +23,8 @@ body{
 
 
 .pageTitle{
-	width: 8em;
+	width: 80%;
+	max-width: 8em;
 	margin: auto;
 	text-align: center;
 	margin-top: 1em;
