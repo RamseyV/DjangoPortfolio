@@ -105,30 +105,17 @@ p.jobTitle{
   
   -webkit-animation: orbitSun linear infinite;
   animation: orbitSun linear infinite;
-  outline-style: none;
+  outline: none;
 }
 
 
-.orbit:hover {
+.orbit:active{
   border-color:#ffffff;
   -webkit-animation-play-state:paused;
   animation-play-state: paused;
   cursor: pointer;
 }
 
-.orbit:hover .planet{
-  -webkit-animation-play-state:paused;
-  animation-play-state: paused;
-}
-
-.orbit:hover .skill{
-  display: block;
-}
-
-.orbit:hover .skillOrbit{
-  -webkit-animation-play-state:paused;
-  animation-play-state: paused;
-}
 
 .asteroidOrbit{
   position: absolute;
@@ -139,23 +126,7 @@ p.jobTitle{
 
 }
 
-.skillOrbit{
 
-  position: relative;
-  bottom: 100%;
-  z-index: 15;
-}
-.skill{
-  color: rgb(187, 0, 193);
-  
-  display: none;
-  background-color: #b7b7b7;
-  height: 1em;
-  width: 5em;
-  text-align: center;
-  
-
-}
 
 #mercury.orbit{
   z-index: 9;
@@ -500,6 +471,15 @@ p.jobTitle{
 
 
   }
+
+  .orbit:hover {
+  border-color:#ffffff;
+  -webkit-animation-play-state:paused;
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+
 }
 
 
