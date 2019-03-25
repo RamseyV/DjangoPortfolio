@@ -9,3 +9,4 @@ This portfolio is made with HTML, CSS, Javascript and django. All of the styling
 * Django
 * Hosting
 * NGINX
+* PostgreSQL
