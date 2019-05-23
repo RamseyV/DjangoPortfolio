@@ -13,3 +13,17 @@ def jobs(request):
 def projects(request):
 	return render(request, 'portfolio/projects.html') 
 
+
+def PileItUp(request):
+	return render(request, 'portfolio/PileItUp.html') 
+
+
+def MissionDemolition(request):
+	return render(request, 'portfolio/MissionDemolition.html') 
+
+def ApplePicker(request):
+	return render(request, 'portfolio/ApplePicker.html') 
+
+def Labyrinth(request):
+	return render(request, 'portfolio/Labyrinth.html') 
+
